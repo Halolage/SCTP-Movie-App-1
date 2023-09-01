@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 # If you are building your code for production
 # RUN npm ci --only=production
 
@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 3000
 
 # Specify the command to run when the container starts
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
