@@ -17,6 +17,10 @@ RUN npm install --legacy-peer-deps
 # Bundle app source
 COPY . .
 
+# Set environment variables for the API key and base URL
+ENV VITE_API_KEY=06e7b98d4ee48965488694b5eb81f103
+ENV VITE_TMDB_API_BASE_URL=https://api.themoviedb.org/3
+
 EXPOSE 3000
 
 # Specify the command to run when the container starts
